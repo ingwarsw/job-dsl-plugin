@@ -458,7 +458,7 @@ public class JenkinsJobManagement extends AbstractJobManagement {
                 notifyItemUpdated(item, dslItem);
                 return false;
             }
-            LOGGER.log(Level.FINE, format("Item %s is have differences", item.getName(), diff.toString()));
+            LOGGER.log(Level.INFO, format("Item %s have differences %s", item.getName(), diff.toString()));
         } catch (Exception e) {
             // It's not a big deal if we can't diff, we'll just move on
             LOGGER.warning(e.getMessage());
